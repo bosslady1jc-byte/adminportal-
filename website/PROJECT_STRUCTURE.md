@@ -1,0 +1,31 @@
+public/
+src/
+  components/
+    Header.js
+    Header.css
+    Footer.js
+    Footer.css
+  pages/
+    HomePage.js
+    HomePage.css
+    ProductsPage.js
+    ProductsPage.css
+    ProductDetail.js
+    ProductDetail.css
+    CartPage.js
+    CartPage.css
+    CheckoutPage.js
+    CheckoutPage.css
+    LoginPage.js
+    LoginPage.css
+    RegisterPage.js
+    RegisterPage.css
+    IntakeFormPage.js
+    IntakeFormPage.css
+    ContactPage.js
+    ContactPage.css
+  App.js
+  App.css
+  index.js
+  index.css
+package.json

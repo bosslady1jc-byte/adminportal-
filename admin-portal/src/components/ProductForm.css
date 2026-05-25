@@ -1,0 +1,5 @@
+.product-form-container { padding:1rem; }
+.product-form .form-group { margin-bottom:0.75rem; }
+.btn { padding:0.5rem 0.75rem; border-radius:6px; }
+.btn-primary { background:#2563eb; color:#fff; border:none; }
+.btn-secondary { background:#e5e7eb; border:none; }

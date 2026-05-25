@@ -1,0 +1,4 @@
+.admin-app { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+.admin-container { display: flex; min-height: 80vh; }
+.admin-main { flex: 1; padding: 1.5rem; background: #f7fafc; }
+.loading { padding: 2rem; text-align: center; color: #374151; }

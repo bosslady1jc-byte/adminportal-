@@ -1,0 +1,21 @@
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 24px;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  font-weight: 700;
+  color: #111827;
+}
+
+.header a {
+  margin-left: 16px;
+  color: #374151;
+}

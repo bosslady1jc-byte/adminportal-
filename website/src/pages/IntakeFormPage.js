@@ -24,7 +24,7 @@ const IntakeFormPage = ({ user }) => {
     e.preventDefault();
     
     try {
-      await axios.post('http://localhost:5000/api/intake-forms', {
+      await axios.post(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/intake-forms`, {
         userId: user.id,
         formType,
         ...formData

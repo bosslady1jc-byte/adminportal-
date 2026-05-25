@@ -16,7 +16,7 @@ const ProductsManagement = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/products');
+      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/products`);
       setProducts(response.data);
       setLoading(false);
     } catch (error) {
@@ -30,7 +30,7 @@ const ProductsManagement = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/products/${productId}`, {
+      await axios.delete(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/products/${productId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProducts(products.filter(p => p._id !== productId));
@@ -46,9 +46,9 @@ const ProductsManagement = () => {
       const headers = { Authorization: `Bearer ${token}` };
 
       if (editingProduct) {
-        await axios.put(`http://localhost:5000/api/products/${editingProduct._id}`, productData, { headers });
+        await axios.put(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/products/${editingProduct._id}`, productData, { headers });
       } else {
-        await axios.post('http://localhost:5000/api/products', productData, { headers });
+        await axios.post(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/products`, productData, { headers });
       }
 
       setShowForm(false);

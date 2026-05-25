@@ -20,9 +20,9 @@ const ClientDashboard = ({ client }) => {
       const headers = { Authorization: `Bearer ${token}` };
 
       const [ordersRes, subscriptionRes, formsRes] = await Promise.all([
-        axios.get(`http://localhost:5000/api/orders/user/${client.id}`, { headers }),
-        axios.get(`http://localhost:5000/api/subscriptions/user/${client.id}`, { headers }),
-        axios.get(`http://localhost:5000/api/intake-forms/user/${client.id}`, { headers })
+        axios.get(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/orders/user/${client.id}`, { headers }),
+        axios.get(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/subscriptions/user/${client.id}`, { headers }),
+        axios.get(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/intake-forms/user/${client.id}`, { headers })
       ]).catch(err => {
         console.error('Error fetching data:', err);
         return [{ data: [] }, { data: null }, { data: [] }];

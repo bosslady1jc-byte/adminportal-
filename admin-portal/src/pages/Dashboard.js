@@ -24,8 +24,8 @@ const Dashboard = () => {
       const headers = { Authorization: `Bearer ${token}` };
 
       const [usersRes, ordersRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/users', { headers }),
-        axios.get('http://localhost:5000/api/orders', { headers })
+        axios.get(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/users`, { headers }),
+        axios.get(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/orders`, { headers })
       ]);
 
       const totalRevenue = ordersRes.data.reduce((sum, order) => sum + (order.total || 0), 0);

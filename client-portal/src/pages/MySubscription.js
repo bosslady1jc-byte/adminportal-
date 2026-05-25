@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'axios';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './MySubscription.css';
 
@@ -36,7 +36,7 @@ const MySubscription = ({ client }) => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.get(
-        `http://localhost:5000/api/subscriptions/user/${client.id}`,
+        `${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/subscriptions/user/${client.id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setSubscription(response.data);
@@ -52,7 +52,7 @@ const MySubscription = ({ client }) => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:5000/api/subscriptions',
+        `${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/subscriptions`,
         {
           userId: client.id,
           name: planName,

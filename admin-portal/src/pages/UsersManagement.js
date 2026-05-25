@@ -14,7 +14,7 @@ const UsersManagement = () => {
   const fetchUsers = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/users', {
+      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/users`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUsers(response.data);

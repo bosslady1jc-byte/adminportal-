@@ -15,7 +15,7 @@ const MyOrders = () => {
       const token = localStorage.getItem('token');
       const user = JSON.parse(localStorage.getItem('user'));
       const response = await axios.get(
-        `http://localhost:5000/api/orders/user/${user.id}`,
+        `${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/orders/user/${user.id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setOrders(response.data);

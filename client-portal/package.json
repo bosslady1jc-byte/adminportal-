@@ -15,6 +15,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://urlocalbff.com",
   "browserslist": {
     "production": [
       ">0.2%",

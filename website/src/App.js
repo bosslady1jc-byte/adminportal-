@@ -14,8 +14,6 @@ import RegisterPage from './pages/RegisterPage';
 import IntakeFormPage from './pages/IntakeFormPage';
 import ContactPage from './pages/ContactPage';
 
-const API_BASE_URL = 'http://localhost:5000/api';
-
 function App() {
   const [user, setUser] = useState(null);
   const [cart, setCart] = useState([]);

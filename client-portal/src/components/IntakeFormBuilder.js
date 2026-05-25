@@ -1,4 +1,4 @@
-import React, { useState } from 'axios';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './IntakeFormBuilder.css';
 
@@ -25,7 +25,7 @@ const IntakeFormBuilder = ({ client, onSubmitted }) => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:5000/api/intake-forms',
+        `${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/intake-forms`,
         {
           userId: client.id,
           formType,

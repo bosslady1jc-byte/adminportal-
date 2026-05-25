@@ -1,4 +1,4 @@
-import React, { useState } from 'axios';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './Profile.css';
 
@@ -30,7 +30,7 @@ const Profile = ({ client }) => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:5000/api/users/${client.id}`,
+        `${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/users/${client.id}`,
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

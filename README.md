@@ -2,6 +2,12 @@
 
 A full-stack web application for tax preparation and ERO software services with admin and client portals.
 
+**Live Domains:**
+- Admin Portal: https://bfftracker.net
+- Public Website + Client Portal: https://urlocalbff.com
+
+> For local development, use `http://localhost:3001` for the admin portal and `http://localhost:3000` / `http://localhost:3002` for the website and client portal.
+
 ## Project Structure
 
 ```

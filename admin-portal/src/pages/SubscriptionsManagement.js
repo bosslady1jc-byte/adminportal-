@@ -13,7 +13,7 @@ const SubscriptionsManagement = () => {
   const fetchSubscriptions = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/subscriptions', {
+      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/subscriptions`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSubscriptions(response.data);
@@ -29,7 +29,7 @@ const SubscriptionsManagement = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.patch(`http://localhost:5000/api/subscriptions/${subscriptionId}/cancel`, {}, {
+      await axios.patch(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/subscriptions/${subscriptionId}/cancel`, {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchSubscriptions();

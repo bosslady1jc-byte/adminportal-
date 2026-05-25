@@ -93,6 +93,19 @@ Once all services are running:
 | **Client Portal** | http://localhost:3002 | Client account and subscriptions |
 | **API** | http://localhost:5000/api | REST API endpoints |
 
+## Local Domain Mapping
+To use the branded domains locally, add these entries to your `/etc/hosts` file:
+
+```bash
+127.0.0.1 bfftracker.net
+127.0.0.1 urlocalbff.com
+```
+
+Then access the apps in your browser as:
+- Admin Portal: http://bfftracker.net:3001
+- Website: http://urlocalbff.com:3000
+- Client Portal: http://urlocalbff.com:3002
+
 ## Test Accounts
 
 Use these credentials for testing:

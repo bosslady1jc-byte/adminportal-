@@ -11,8 +11,6 @@ import IntakeForms from './pages/IntakeForms';
 import Profile from './pages/Profile';
 import LoginPage from './pages/LoginPage';
 
-const API_BASE_URL = 'http://localhost:5000/api';
-
 function ClientApp() {
   const [client, setClient] = useState(null);
   const [loading, setLoading] = useState(true);

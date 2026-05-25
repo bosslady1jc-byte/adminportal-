@@ -11,8 +11,6 @@ import OrdersManagement from './pages/OrdersManagement';
 import SubscriptionsManagement from './pages/SubscriptionsManagement';
 import IntakeFormsManagement from './pages/IntakeFormsManagement';
 
-const API_BASE_URL = 'http://localhost:5000/api';
-
 function AdminApp() {
   const [admin, setAdmin] = useState(null);
   const [loading, setLoading] = useState(true);

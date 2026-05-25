@@ -15,7 +15,7 @@ const ProductDetail = ({ addToCart }) => {
 
   const fetchProduct = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/products/${id}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/products/${id}`);
       setProduct(response.data);
       setLoading(false);
     } catch (error) {

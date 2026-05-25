@@ -16,7 +16,7 @@ const IntakeForms = ({ client }) => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.get(
-        `http://localhost:5000/api/intake-forms/user/${client.id}`,
+        `${process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'}/intake-forms/user/${client.id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setForms(response.data);
